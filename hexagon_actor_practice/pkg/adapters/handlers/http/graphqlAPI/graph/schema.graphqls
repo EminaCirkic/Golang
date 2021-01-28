@@ -1,0 +1,34 @@
+type Book  {
+  _id: String
+  title: String
+	author: String
+}
+
+type Review  {
+	_id:       String    
+	bookid:    Int       
+	firstname: String   
+	lastname:  String    
+	score:     Int      
+	text:      String   
+	created:   String
+}
+
+type Query{
+  getbook(_id: String): Book
+  getBooks: [Book]
+  getBookReview(_id: String):[Review]
+}
+
+input NewBook{
+  title: String
+  author: String
+}
+
+input NewReview{
+  bookid:    Int       
+	firstname: String   
+	lastname:  String    
+	score:     Int      
+	text:      String   
+}
